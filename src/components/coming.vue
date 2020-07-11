@@ -39,7 +39,8 @@ export default {
         'hoping': hoping
     },
     created() {
-        axios.get("http://www.softeem.xin/maoyanApi/ajax/comingList?ci=57&token=&limit=10")
+        // axios.get("http://www.softeem.xin/maoyanApi/ajax/comingList?ci=57&token=&limit=10")
+        axios.get("/comingList?ci=57&token=&limit=10")
         .then(res => {
                 this.comingList = res.data.coming;
                 /* if(res.data.coming.showInfo) {

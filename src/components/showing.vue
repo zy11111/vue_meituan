@@ -30,7 +30,8 @@ export default {
     },
     // http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList
     created() {
-        axios.get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
+        // axios.get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
+        axios.get("/movieOnInfoList")
         .then(res => {
             this.showingList = res.data.movieList;
         })

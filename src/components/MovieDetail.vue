@@ -62,7 +62,8 @@ export default {
     //http://www.softeem.xin/maoyanApi/ajax/detailmovie?movieId=id
     created() {
         var id = this.$route.query.id;
-        axios.get("http://www.softeem.xin/maoyanApi/ajax/detailmovie?movieId=" + id)
+        // axios.get("http://www.softeem.xin/maoyanApi/ajax/detailmovie?movieId=" + id)
+        axios.get("/detailmovie?movieId=" + id)
         .then(res => {
                 this.movieDetail = res.data.detailMovie;
                 this.isReady = true;

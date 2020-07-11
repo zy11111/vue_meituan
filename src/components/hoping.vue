@@ -27,7 +27,8 @@ export default {
     },
     // http://www.softeem.xin/maoyanApi/ajax/mostExpected?ci=57&limit=10&offset=0&token=
     created() {
-        axios.get("http://www.softeem.xin/maoyanApi/ajax/mostExpected?ci=57&limit=10&offset=0&token=")
+        // axios.get("http://www.softeem.xin/maoyanApi/ajax/mostExpected?ci=57&limit=10&offset=0&token=")
+        axios.get("/mostExpected?ci=57&limit=10&offset=0&token=")
         .then(res => {
                 this.hopeList = res.data.coming;
                 console.log(this.hopeList);

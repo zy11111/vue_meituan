@@ -34,7 +34,8 @@ export default {
         }
     },
     created() {
-        axios.get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
+        // axios.get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
+        axios.get("/movieOnInfoList")
         .then(res => {
                 this.movieList = res.data.movieList;
                 console.log(res.data);
